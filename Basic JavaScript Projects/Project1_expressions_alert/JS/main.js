@@ -14,3 +14,7 @@ document.write("\Be who you are and say what you feel,"
 
 var Family = "My family is great" + "family"
 document.write(Family)
+
+var Sports = "Football", Run = "Track", Throw = "disc";
+var B = "Family" + "Sports"
+document.write(B)
