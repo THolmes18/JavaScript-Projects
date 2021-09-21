@@ -7,3 +7,10 @@ document.write(2 + 2);
 window.alert("TAna created this!");
 
 document.write("Tech Academy has helped me so much!" + "I love coding!")
+
+document.write("\Be who you are and say what you feel,"
++ "because those who mind don\'t matter and those who matter don\'t mind.\"" 
++ "-Dr. Seuess");
+
+var Family = "My family is great" + "family"
+document.write(Family)
