@@ -16,5 +16,5 @@ var Family = "My family is great" + "family"
 document.write(Family)
 
 var Sports = "Football", Run = "Track", Throw = "disc";
-var B = "Family" + "Sports"
+var B = Family + Sports
 document.write(B)
