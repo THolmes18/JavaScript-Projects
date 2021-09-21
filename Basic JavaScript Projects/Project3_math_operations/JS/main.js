@@ -11,7 +11,7 @@ function subtraction_Function () {
     document.getElementById("Math").innerHTML = "5 - 2 = " + Subtraction;
 }
 document.write(5 - 2)
-n
+
 //Multiplication Function
 function Multiplication() {
     var simple_Math = 6 * 8;
