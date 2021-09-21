@@ -59,3 +59,4 @@ document.write(x);
 window.alert(Math.random());
 //random number between 0 and 100
 window.alert(Math.random()* 100);
+
