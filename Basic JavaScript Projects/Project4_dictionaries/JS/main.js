@@ -10,7 +10,7 @@ function Dictionary () {
     document.getElementById("Dictionary").innerHTML = Animal.Breed;
 
 }
-function Dictionary () {
+function Animal () {
     var Animal = {
         Species:"Dog",
         Color:"Brown",
