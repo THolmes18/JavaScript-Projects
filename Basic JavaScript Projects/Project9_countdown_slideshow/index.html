@@ -1,33 +1,31 @@
 <!DOCTYPE HTML>
 <html>
-    <meta charset="utf-8">
     <head>
+        <meta charset="utf-8">
         <script src="JS/main.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="./CSS/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--slideshow-->
-       <!--Creating a javascript program-->
-       <p>How many seconds would you like to set your alarm for?</p>
-       <input id="seconds" value="" />
-       <button onclick="countdown()">Click here</button>
-       <p id="timer"></p>
-
+    
+        <body>
        <!--Slideshow Container step 1:HTML-->
-        <div class="slideshow container">
+        <div class="slideshow-container">
             <!--full width images with number and caption text-->
             <div class="mySlides fade">
                 <div class="numbertext">1 / 3</div>
-                <img src="img1.jpg" style="width:100%">
+                <img src="./images/img1.jpeg" style="width:80%">
                 <div class="text">Beautiful</div>
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">2 / 3</div>
-                <img src="img2.jpg" style="width:100%">
+                <img src="./images/img2.jpeg" style="width:80%">
                 <div class="text">Scene</div>
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">3 / 3</div>
-                <img src="img3.jpg" style="width:100%">
+                <img src="./images/img3.jpeg" style="width:80%">
                 <div class="text">Nature</div>
             </div>
 
@@ -38,18 +36,12 @@
         <br>
 
         <!--The dots/circles-->
-        <div style="text-align: center;">
+        <div style="text-align:center;">
             <span class="dot" onclick="currentslide(1)"></span>
             <span class="dot" onclick="currentslide(2)"></span>
             <span class="dot" onclick="currentslide(3)"></span>
-        </div>
-
-        
-            
-        
-        
+        </div> 
+        </body>
     </head>
 </html>
 
-<script src="JavaScript_File.js"></script>
-<link rel="stylesheet" type="text/css" href="CSS_File.css">
