@@ -29,3 +29,9 @@ function precision_Method() {
     var x = 12938.3012987376112;
     document.getElementById("Precision").innerHTML = x.toPrecision(10);
 }
+//toFixed
+function anotherFunction() {
+    var num = 5.56789;
+    var n = num.toFixed(2);
+    document.getElementById("demo").innerHTML = n;
+}
