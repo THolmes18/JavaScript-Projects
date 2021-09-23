@@ -64,3 +64,18 @@ function License_Function() {
     }
     document.getElementById("What_year_were_you_born?").innerHTML = License;
 }
+//else if statements
+function Time_Function() {
+    var Time = new Date().getHours();
+    var Reply;
+    if (Time < 12 == Time > 0) {
+        Reply = "It is morning time!";
+    }
+    else if (Time >= 12 == Time < 18) {
+        Reply = "It is afternoon.";
+    }
+    else {
+        Reply = "It is evening time.";
+    }
+    document.getElementById("Time_of_day").innerHTML = Reply;
+}
