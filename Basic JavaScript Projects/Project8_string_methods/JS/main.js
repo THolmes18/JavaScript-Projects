@@ -41,8 +41,3 @@ function valueofMethod() {
     var n = num.valueOf()
     document.getElementById("mack").innerHTML = n;
 }
-function myFunction() {
-    var num = 15;
-    var n = num.valueOf()
-    document.getElementById("mack").innerHTML = n;
-  }
