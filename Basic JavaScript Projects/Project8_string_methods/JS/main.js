@@ -35,3 +35,14 @@ function anotherFunction() {
     var n = num.toFixed(2);
     document.getElementById("demo").innerHTML = n;
 }
+//valueof method
+function valueofMethod() {
+    var num = 15;
+    var n = num.valueOf()
+    document.getElementById("mack").innerHTML = n;
+}
+function myFunction() {
+    var num = 15;
+    var n = num.valueOf()
+    document.getElementById("mack").innerHTML = n;
+  }
