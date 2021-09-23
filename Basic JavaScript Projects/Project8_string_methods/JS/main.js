@@ -19,8 +19,13 @@ function myFunction() {
     var res = str.toUpperCase();
     document.getElementById("example").innerHTML = res;
 }
-//number methods
+//number methods--182 is displayed
 function string_Method() {
     var x =182;
     document.getElementById("Numbers_to_string").innerHTML = x.toString();
+}
+//TOPRECISION METHOD 12938.30130 is displayed
+function precision_Method() {
+    var x = 12938.3012987376112;
+    document.getElementById("Precision").innerHTML = x.toPrecision(10);
 }
