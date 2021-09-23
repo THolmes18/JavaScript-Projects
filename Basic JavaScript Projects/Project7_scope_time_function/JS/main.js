@@ -54,3 +54,13 @@ function Age_Function() {
     }
     document.getElementById("How_old_are_you?").innerHTML = Vote;
 }
+function License_Function() {
+    License = document.getElementById("License").value;
+    if (License >= 2014) {
+        License = "You do not have a license.";
+    }
+    else {
+        License = "You should have a license.";
+    }
+    document.getElementById("What_year_were_you_born?").innerHTML = License;
+}
