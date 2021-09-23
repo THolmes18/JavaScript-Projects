@@ -64,7 +64,7 @@ function License_Function() {
     }
     document.getElementById("What_year_were_you_born?").innerHTML = License;
 }
-//else if statements
+//else if statements this function pulls the time from your computer.
 function Time_Function() {
     var Time = new Date().getHours();
     var Reply;
