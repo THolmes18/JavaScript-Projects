@@ -7,7 +7,7 @@ function for_Loop() {
     }
     document.getElementById("List_of_Instruments").innerHTML = Content;
 }
-//Writing a loop saved us from writing document.write() fpr each method
+//Writing a loop saved us from writing document.write() for each method
 
 function bunny_pics() {
     var Bunny_Picture = [];
