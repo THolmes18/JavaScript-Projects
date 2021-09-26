@@ -32,12 +32,6 @@ document.write(x);
 }
 document.write("<br>" + x);
 
-//return statement
-function equation() {
-    return Math.PI;
-}
-document.getElementById("return").innerHTML = equation();
-
 //objects with properties
 let car = {
     make: "Acura ",
@@ -65,4 +59,6 @@ for (let i = 0; i < 10; i++) {
   text += "The number is " + i + "<br>";
 }
 document.getElementById("demo").innerHTML = text;
+
+
 
