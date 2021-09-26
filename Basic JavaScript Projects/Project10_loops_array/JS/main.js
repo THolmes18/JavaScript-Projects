@@ -47,7 +47,7 @@ let car = {
     description : function() {
         return "The car is a " + this.year + this.color + this.make + this.model;
     }
-};
+}
 document.getElementById("Car_Object").innerHTML = car.description();
 //break statement
 let text = "";
@@ -59,9 +59,10 @@ for (let i = 0; i < 10; i++) {
 document.getElementById("demo").innerHTML = text;
 
 //continue statement
-let text = "";
+let words = "";
 for (let i = 0; i < 10; i++) {
   if (i === 3) { continue; }
   text += "The number is " + i + "<br>";
 }
 document.getElementById("demo").innerHTML = text;
+
