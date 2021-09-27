@@ -136,3 +136,81 @@ function audio(audioURL) {
     //play method plays our audio sound.
     audio.play();
 }
+
+//this function utilizes html canvas to draw win line.
+function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
+    //this line acesses html canvas element.
+    const canvas = document.getElementById('win-lines')
+    //this line indicates where the start of a lines x axis is.
+    let x1 = coodrX1,
+        //line indicates where the start of a lines y axis is.
+        y1 = coordY1,
+        //line indicates end of a line x
+        x2 = coordX2,
+        //end of line x axis
+        y2 = coordY2,
+        //temp.x axis we update in animaton loop
+        x = x1,
+        //temp y axis update in animation loop
+        y = y1;
+
+    //interacts with canvas
+    function animateLineDrawing() {
+        //creates a loop
+        const animationLoop = requestAnimationFrame(animateLineDrawing);
+        //clears content from last loop iteration
+        c.clearRect(0, 0, 608, 608)
+        //starts a new path
+        c.beginPath();
+        //moves to starting point for line
+        c.moveTo(x1, y1)
+        //end point in our line
+        c.lineTo(x, y)
+        //sets line width
+        c.strokeStyle = 'rgba(70, 225, 33, .8)';
+        //draws everything mention above
+        c.stroke();
+        //checks if endpoint has been reached
+        if (x1 <= x2 && y1 <= y2) {
+            //condition adds 10 to previous end x point
+            if (x < x2) { x += 10; }
+            //adds 10 to previous y point
+            if (y < y2) { y += 10; }
+            //cancels animation loop
+            //if end points are reached
+            if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
+        }
+        //similar to one above;needed for 6, 4, 2 win condition
+        if (x1 <= x2 && y1 >= y2) {
+            if (x < x2) { x += 10; }
+            if (y > y2) { y -= 10; }
+            if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
+        }
+    }
+}
+
+//clears canvas after win line is drawn
+function clear() {
+    //starts animation loop
+    const animationLoop = requestAnimationFrame(clear);
+    //clears animation
+    c.clearRect(0, 0, 608, 608);
+    //stops animation loop
+    animateLineDrawing();
+    //1sec wait clears canvas resets game and allowsclickung again
+    setTimeout(function () {clear(); resetGame(); }, 1000);
+}
+
+//rests game in tie or win
+function resetGame() {
+    //loop iterates through each html square element
+    for (let i = 0; i < 9; i++) {
+        //gets html element of 1
+        let square = document.getElementById(String(i))
+        //removes background image
+        square.style.backgroundImage = ''
+    }
+    //resets array to start over
+    selectedSquares = [];
+
+}
