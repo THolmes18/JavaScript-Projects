@@ -148,7 +148,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //gives access to properties and methods used on canvas.
     const c = canvas.getContext('2d');
     //this line indicates where the start of a lines x axis is.
-    let x1 = coodrX1,
+    let x1 = coordX1,
         //line indicates where the start of a lines y axis is.
         y1 = coordY1,
         //line indicates end of a line x
