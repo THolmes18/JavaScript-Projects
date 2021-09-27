@@ -12,23 +12,27 @@ function placeXOrO(squareNumber) {
         //this variable retrieves the html element id that was clicked.
         let select = document.getElementById(squareNumber);
         // this condition checks who's turn it is
-    } else {
+        if (activePlayer === 'X') { 
+        //if activeplayer = x the x.png is placed in HTML
+        select.style.backgroundImage = 'url("images/x.png")';
+        //active player may only b X or O, if not X it must be O
+        } else {
         //if active player is equal to '0' the o.png is placed in html
         select.style.backgroundImage = 'url("images/o.png")';
     }
-//squareNumber and activeplayer are concatenated together and added to array.
-selectedSquares.push(squareNumber + activePlayer);
-//this calls a function to check for any win conditions
-checkWinConditions();
-//this condition is for changing the active player.
-if (activePlayer === 'X') {
-    //if activeplayer is X change it to O
-    activePlayer = 'O';
-    //if active player is anything other than X
-} else {
-    //change the activeplayer to X
-    activePlayer = 'X';
-}
+    //squareNumber and activeplayer are concatenated together and added to array.
+    selectedSquares.push(squareNumber + activePlayer);
+    //this calls a function to check for any win conditions
+    checkWinConditions();
+    //this condition is for changing the active player.
+    if (activePlayer === 'X') {
+        //if activeplayer is X change it to O
+        activePlayer = 'O';
+        //if active player is anything other than X
+    } else {
+        //change the activeplayer to X
+        activePlayer = 'X';
+    }
 
         //this function plays placement sound
         audio('.media/place.mp3');
