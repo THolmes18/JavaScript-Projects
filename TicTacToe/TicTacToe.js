@@ -195,7 +195,6 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
             if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
         }
     }
-}
 
 //clears canvas after win line is drawn
     function clear() {
