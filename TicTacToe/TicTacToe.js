@@ -35,7 +35,7 @@ function placeXOrO(squareNumber) {
     }
 
         //this function plays placement sound
-        audio('.media/place.mp3');
+        audio('./media/place.mp3');
         //this condition checks to see if it is the computers turn.
         if(activePlayer === 'O') {
             //this function disables clicking for computer choice.
@@ -45,7 +45,7 @@ function placeXOrO(squareNumber) {
         }
         //returning true is needed for our computersturn() function 
         return true;
-
+    }
     //this function results in a random square being selected.
     function computersTurn() {
         //this boolean is needed for while loop.
@@ -55,7 +55,7 @@ function placeXOrO(squareNumber) {
         //this condition allows while loop to keep trying if a square is selected already.
         while(!success) {
             //a random number between 0-8 is selected
-            pickASquare = String(Math.floor(Math.random()* 9));
+            pickASquare = String(Math.floor(Math.random() * 9));
             //if the random number evaluated returns true, the square hasnt been selected yet.
             if (placeXOrO(pickASquare)) {
                 //calling the function now:
@@ -121,7 +121,7 @@ function checkWinConditions() {
         const c = selectedSquares.includes(squareC)
         //if the 3 variable we pass are all included in our array true is
         //returned and our else if condition executes the drawWinLine function.
-        if (a === true && b === true && c === true) { return true}
+        if (a === true && b === true && c === true) { return true }
     }
 }
 //this function makes our body element temporarily unclickable.
@@ -145,6 +145,8 @@ function audio(audioURL) {
 function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //this line acesses html canvas element.
     const canvas = document.getElementById('win-lines')
+    //gives access to properties and methods used on canvas.
+    const c = canvas.getContext('2d');
     //this line indicates where the start of a lines x axis is.
     let x1 = coodrX1,
         //line indicates where the start of a lines y axis is.
@@ -171,6 +173,8 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //end point in our line
         c.lineTo(x, y)
         //sets line width
+        c.lineWidth = 10;
+        //color of the line
         c.strokeStyle = 'rgba(70, 225, 33, .8)';
         //draws everything mention above
         c.stroke();
@@ -194,17 +198,19 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
 }
 
 //clears canvas after win line is drawn
-function clear() {
-    //starts animation loop
-    const animationLoop = requestAnimationFrame(clear);
-    //clears animation
-    c.clearRect(0, 0, 608, 608);
-    //stops animation loop
-    animateLineDrawing();
-    //1sec wait clears canvas resets game and allowsclickung again
-    setTimeout(function () {clear(); resetGame(); }, 1000);
+    function clear() {
+        //starts animation loop
+        const animationLoop = requestAnimationFrame(clear);
+        //clears animation
+        c.clearRect(0, 0, 608, 608);
+        //stops animation loop
+        cancelAnimationFrame(animationLoop);
+    }
+    //this line calls main animation loop. 
+        animateLineDrawing();
+        //1sec wait clears canvas resets game and allowsclickung again
+        setTimeout(function () { clear(); resetGame(); }, 1000);
 }
-
 //rests game in tie or win
 function resetGame() {
     //loop iterates through each html square element
