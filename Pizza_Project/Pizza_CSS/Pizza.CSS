@@ -1,0 +1,74 @@
+#menuBG {
+    width:600px;
+    height: 670px;
+    margin: 50px auto;
+    background-color: deeppink;
+    font-family: monospace;
+}
+
+#frmMenu {
+    width: 400px;
+    height: 200px;
+    font-family: monospace;
+}
+
+#totalPrice {
+    width:200px;
+    height:190px;
+    margin: 0 auto;
+    float: right;
+    font-family: monospace;
+}
+
+.left {
+    width: 200px;
+    height: 200px;
+    float: left;
+    font-family: monospace;
+}
+
+.right {
+    width: 200px;
+    height: 200px;
+    float: right;
+    font-family: monospace;
+}
+
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+    font-family: monospace;
+}
+
+#cart {
+    top: 0;margin: 0px auto;
+    width: 400px;
+    height: 200px;
+    font-family: monospace;
+}
+
+#btnOrder {
+    margin: 10px 0px 0px 100px;
+    width: 100px;
+    height: 40px;
+    font-family: monospace;
+}
+
+h1 {
+    font-family: monospace;
+    color: deepskyblue;
+}
+
+h3 {
+    font-family: fantasy;
+    color: gold;
+}
+
+.center {
+    width: 200px;
+    height: 200px;
+    float: left;
+    font-family: monospace;
+}
