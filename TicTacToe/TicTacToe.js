@@ -205,6 +205,10 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //stops animation loop
         cancelAnimationFrame(animationLoop);
     }
+    //This line disallows clicking while the win sound is playing.
+    disableClick();
+    //this line plays the win sounds.
+    audio('./media/winGame.mp3');
     //this line calls main animation loop. 
         animateLineDrawing();
         //1sec wait clears canvas resets game and allowsclickung again
