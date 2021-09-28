@@ -28,7 +28,7 @@
         //ensures accidental clicking of decimal
         //doesnt cause bugs
         if (Calculator.Wait_Second_Operand === true) return;
-        if (Calculator.Display_Value.indludes(dot)) {
+        if (Calculator.Display_Value.includes(dot)) {
             //if display value doesnt contain a decimal then add one
             Calculator.Display_Value += dot;
         }
