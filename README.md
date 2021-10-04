@@ -25,5 +25,5 @@ to use and the winner is celebrated with music and flashing lights.
 
 Caluclator
 
-A basic calculator. users can add, subtract,multiply, and divide on a sleek web version
+A basic 4 funtion calculator. users can add, subtract,multiply, and divide on a sleek web version
 of a calculator.
